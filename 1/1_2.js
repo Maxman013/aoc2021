@@ -1,10 +1,10 @@
 const fs = require("fs");
 
-var measurements = fs.readFileSync("1.txt", {encoding: "utf8"}).split("\n").map(Number);
+var input = fs.readFileSync("1.txt", {encoding: "utf8"}).split('\n').map(Number);
 var count = 0;
 
-for (i = 3; i < measurements.length; i++) {
-    if (measurements[i] + measurements[i - 1] + measurements[i - 2] > measurements[i - 1] + measurements[i - 2] + measurements[i - 3]) {
+for (i = 3; i < input.length; i++) {
+    if (input[i] + input[i - 1] + input[i - 2] > input[i - 1] + input[i - 2] + input[i - 3]) {
         count++;
     }
 }
